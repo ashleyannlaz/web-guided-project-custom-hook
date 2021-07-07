@@ -30,7 +30,7 @@ export default function SignupForm() {
 
   const handleSubmit = e => {
     e.preventDefault();
-    alert(firstName);
+    alert(firstName + ' ' + lastName);
   };
 
   return (
@@ -44,6 +44,16 @@ export default function SignupForm() {
             className={classes.textField}
             name="firstName"
             value={firstName}
+            onChange={handleChanges}
+            margin="normal"
+            variant="outlined"
+          />
+          <TextField
+            id="outlined-name"
+            label="Last Name"
+            className={classes.textField}
+            name="lasttName"
+            value={lastName}
             onChange={handleChanges}
             margin="normal"
             variant="outlined"
