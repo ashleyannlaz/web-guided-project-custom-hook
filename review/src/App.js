@@ -20,12 +20,12 @@ const usePokeState = () => {
         setSelectedPokemon(data);
       })
   };
+
+  return ([pokemen, selectedPokemon, handlePoke]);
 }
 
 
 function App() {
-
-
 
   return (
     <div className="App">
