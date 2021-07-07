@@ -12,6 +12,9 @@ const getPokemen = () => {
 
 const getPokemon = (id) => {
   return axios.get(`https://pokeapi.co/api/v2/pokemon/${id}/`)
+    .then((res) => {
+      return (res.data);
+    })
 }
 
 function App() {
@@ -24,9 +27,6 @@ function App() {
 
   const handlePoke = (id) => {
     getPokemon(id)
-      .then((res) => {
-        return (res.data);
-      })
       .then(data => {
         setSelectedPokemon(data);
       })
