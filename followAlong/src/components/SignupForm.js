@@ -29,7 +29,8 @@ const useForm = (initialState) => {
 
 const initialState = {
   firstName: "",
-  lastName: ""
+  lastName: "",
+  email: ""
 }
 
 export default function SignupForm() {
@@ -40,7 +41,7 @@ export default function SignupForm() {
 
   const handleSubmit = e => {
     e.preventDefault();
-    alert(values.firstName + ' ' + values.lastName);
+    alert(values.firstName + ' ' + values.lastName + ' ' + values.email);
   };
 
   return (
