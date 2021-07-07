@@ -4,30 +4,6 @@ import TextField from "@material-ui/core/TextField";
 
 import Button from "../theme/Button";
 
-//1. create a useForm function.
-//2. Identify all of the stateful logic in the component.
-//3. Return the needed pieces of state/functions.
-//4. Use useForm instead of hardcoded stateful logic.
-
-const useForm = (initialState) => {
-  const [values, setValues] = useState(initialState);
-
-  const handleChanges = e => {
-    setValues({
-      ...values,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const clearForm = e => {
-    e.preventDefault();
-    setValues(initialState);
-  };
-
-  return ([values, handleChanges, clearForm]);
-}
-
-
 const useLocalStorage = (key, initialValue) => {
   //1. Setup useState.
   //2. CHeck to see if a value for the key exists in localStorage
@@ -44,6 +20,29 @@ const useLocalStorage = (key, initialValue) => {
   });
 
   return ([value, setValue]);
+}
+
+//1. create a useForm function.
+//2. Identify all of the stateful logic in the component.
+//3. Return the needed pieces of state/functions.
+//4. Use useForm instead of hardcoded stateful logic.
+
+const useForm = (initialState) => {
+  const [values, setValues] = useLocalStorage('form', initialState);
+
+  const handleChanges = e => {
+    setValues({
+      ...values,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const clearForm = e => {
+    e.preventDefault();
+    setValues(initialState);
+  };
+
+  return ([values, handleChanges, clearForm]);
 }
 
 const initialState = {
