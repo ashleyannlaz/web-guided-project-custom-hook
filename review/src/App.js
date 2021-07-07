@@ -10,6 +10,10 @@ const getPokemen = () => {
   return (data);
 }
 
+const getPokemon = (id) => {
+
+}
+
 function App() {
   const [pokemen, setPokemen] = useState([]);
   const [selectedPokemon, setSelectedPokemon] = useState({});
