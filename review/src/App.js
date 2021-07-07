@@ -25,8 +25,11 @@ function App() {
   const handlePoke = (id) => {
     getPokemon(id)
       .then((res) => {
-        setSelectedPokemon(res.data);
-      });
+        return (res.data);
+      })
+      .then(data => {
+        setSelectedPokemon(data);
+      })
   };
 
   return (
