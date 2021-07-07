@@ -6,16 +6,7 @@ import data from "../data";
 import SelectedPokemon from './components/SelectedPokemon';
 import PokeList from './components/PokeList';
 
-const getPokemen = () => {
-  return (data);
-}
-
-const getPokemon = (id) => {
-  return axios.get(`https://pokeapi.co/api/v2/pokemon/${id}/`)
-    .then((res) => {
-      return (res.data);
-    })
-}
+import { getPokemon, getPokemen } from './services/PokeService';
 
 function App() {
   const [pokemen, setPokemen] = useState([]);
