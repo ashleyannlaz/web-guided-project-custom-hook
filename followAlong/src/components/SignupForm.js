@@ -24,9 +24,16 @@ const useForm = (initialState) => {
   return ([values, handleChanges, clearForm]);
 }
 
+const initialState = {
+  firstName: "warren",
+  lastName: "longmire"
+}
+
 export default function SignupForm() {
   const classes = useStyles();
-  const [values, handleChanges, clearForm] = useForm(["warren", "longmire"]);
+  const [values, handleChanges, clearForm] = useForm(initialState);
+
+  console.log(values);
 
   const handleSubmit = e => {
     e.preventDefault();
