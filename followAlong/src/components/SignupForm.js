@@ -10,18 +10,18 @@ import Button from "../theme/Button";
 //4. Use useForm instead of hardcoded stateful logic.
 
 const useForm = (initialState) => {
-  const [firstName, setFirstName] = useState(initialState);
+  const [value, setValue] = useState(initialState);
 
   const handleChanges = e => {
-    setFirstName(e.target.value);
+    setValue(e.target.value);
   };
 
   const clearForm = e => {
     e.preventDefault();
-    setFirstName(initialState);
+    setValue(initialState);
   };
 
-  return ([firstName, handleChanges, clearForm]);
+  return ([value, handleChanges, clearForm]);
 }
 
 export default function SignupForm() {
