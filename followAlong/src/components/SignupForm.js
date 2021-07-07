@@ -20,11 +20,13 @@ const useForm = () => {
     e.preventDefault();
     setFirstName("");
   };
+
+  return ([firstName, handleChanges, clearForm]);
 }
 
 export default function SignupForm() {
   const classes = useStyles();
-
+  const [firstName, handleChanges, clearForm] = useForm();
 
   const handleSubmit = e => {
     e.preventDefault();
