@@ -27,6 +27,11 @@ const useForm = (initialState) => {
   return ([values, handleChanges, clearForm]);
 }
 
+
+const useLocalStorage = (key, initialValue) => {
+
+}
+
 const initialState = {
   firstName: "",
   lastName: "",
