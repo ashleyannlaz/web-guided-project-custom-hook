@@ -25,8 +25,8 @@ const useForm = (initialState) => {
 }
 
 const initialState = {
-  firstName: "warren",
-  lastName: "longmire"
+  firstName: "",
+  lastName: ""
 }
 
 export default function SignupForm() {
