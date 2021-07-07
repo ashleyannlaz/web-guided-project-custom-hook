@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 
 const usePokeState = () => {
   const [pokemen, setPokemen] = useState([]);
