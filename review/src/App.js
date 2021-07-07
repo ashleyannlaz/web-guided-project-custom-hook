@@ -8,13 +8,6 @@ import { getPokemon, getPokemen } from './services/PokeService';
 
 const usePokeState = () => {
 
-}
-
-
-function App() {
-  const [pokemen, setPokemen] = useState([]);
-  const [selectedPokemon, setSelectedPokemon] = useState({});
-
   useEffect(() => {
     setPokemen(getPokemen());
   }, []);
@@ -25,6 +18,14 @@ function App() {
         setSelectedPokemon(data);
       })
   };
+}
+
+
+function App() {
+  const [pokemen, setPokemen] = useState([]);
+  const [selectedPokemon, setSelectedPokemon] = useState({});
+
+
 
   return (
     <div className="App">
