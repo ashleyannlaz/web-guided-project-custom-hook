@@ -19,7 +19,11 @@ const useLocalStorage = (key, initialValue) => {
     }
   });
 
-  return ([value, setValue]);
+  const setStoredValue = (value) => {
+    setValue(value);
+  }
+
+  return ([value, setStoredValue]);
 }
 
 //1. create a useForm function.
