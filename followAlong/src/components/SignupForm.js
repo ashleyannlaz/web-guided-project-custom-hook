@@ -34,7 +34,9 @@ const useLocalStorage = (key, initialValue) => {
   //3. if a value does exist in LS, put it into state
   //4. if a value does not exist in LS, put initialValue into LS
   //5. when setting state, also save value to LS
+  const [value, setValue] = useState(initialValue);
 
+  return ([value, setValue]);
 }
 
 const initialState = {
