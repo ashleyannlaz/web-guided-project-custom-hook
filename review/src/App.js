@@ -6,6 +6,10 @@ import data from "../data";
 import SelectedPokemon from './components/SelectedPokemon';
 import PokeList from './components/PokeList';
 
+const getPokemen = () => {
+  return (data);
+}
+
 function App() {
   const [pokemen, setPokemen] = useState([]);
   const [selectedPokemon, setSelectedPokemon] = useState({});
