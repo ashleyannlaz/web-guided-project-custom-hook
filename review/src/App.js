@@ -21,7 +21,7 @@ const usePokeState = () => {
       })
   };
 
-  return ({ pokemon: pokemen, selectedPokemon: selectedPokemon, handlePoke: handlePoke });
+  return ([pokemen, selectedPokemon, handlePoke]);
 }
 
 
