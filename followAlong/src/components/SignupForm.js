@@ -33,7 +33,7 @@ export default function SignupForm() {
   const classes = useStyles();
   const [values, handleChanges, clearForm] = useForm(initialState);
 
-  console.log(values);
+  console.log('values: ', values);
 
   const handleSubmit = e => {
     e.preventDefault();
