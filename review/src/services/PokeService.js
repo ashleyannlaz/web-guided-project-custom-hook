@@ -1,3 +1,5 @@
+import axios from 'axios';
+import data from './../../data.js';
 
 export const getPokemen = () => {
   return (data);
