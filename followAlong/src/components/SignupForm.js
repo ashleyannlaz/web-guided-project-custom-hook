@@ -28,7 +28,7 @@ const useForm = (initialState) => {
 }
 
 const initialState = {
-  firstName: "",
+  firstName: localStorage.getItem("name"),
   lastName: "",
   email: ""
 }
