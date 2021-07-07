@@ -9,22 +9,26 @@ import Button from "../theme/Button";
 //3. Return the needed pieces of state/functions.
 //4. Use useForm instead of hardcoded stateful logic.
 
-export default function SignupForm() {
-  const classes = useStyles();
+const useForm = () => {
   const [firstName, setFirstName] = useState("");
 
   const handleChanges = e => {
     setFirstName(e.target.value);
   };
 
-  const handleSubmit = e => {
-    e.preventDefault();
-    alert(firstName);
-  };
-
   const clearForm = e => {
     e.preventDefault();
     setFirstName("");
+  };
+}
+
+export default function SignupForm() {
+  const classes = useStyles();
+
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    alert(firstName);
   };
 
   return (
