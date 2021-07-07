@@ -4,6 +4,11 @@ import TextField from "@material-ui/core/TextField";
 
 import Button from "../theme/Button";
 
+//1. create a useForm function.
+//2. Identify all of the stateful logic in the component.
+//3. Return the needed pieces of state/functions.
+//4. Use useForm instead of hardcoded stateful logic.
+
 export default function SignupForm() {
   const classes = useStyles();
   const [firstName, setFirstName] = useState("");
