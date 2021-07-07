@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./styles.scss";
-import axios from 'axios';
-import data from "../data";
 
 import SelectedPokemon from './components/SelectedPokemon';
 import PokeList from './components/PokeList';
