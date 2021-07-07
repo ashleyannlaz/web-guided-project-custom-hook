@@ -13,7 +13,10 @@ const useForm = (initialState) => {
   const [values, setValues] = useState(initialState);
 
   const handleChanges = e => {
-    setValues(e.target.value);
+    console.log(e.target.name);
+    setValues({
+      lastName: e.target.value
+    });
   };
 
   const clearForm = e => {
@@ -59,7 +62,7 @@ export default function SignupForm() {
             id="outlined-name"
             label="Last Name"
             className={classes.textField}
-            name="lasttName"
+            name="lastName"
             value={values.lastName}
             onChange={handleChanges}
             margin="normal"
