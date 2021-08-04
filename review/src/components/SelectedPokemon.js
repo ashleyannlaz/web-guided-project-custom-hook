@@ -3,6 +3,7 @@ import React from 'react'
 const SelectedPokemon = (props) => {
     const { selectedPokemon } = props;
 
+    return (
     <div id="selectedDiv">
     <h2>Selected Pokemon: {selectedPokemon.name || "none"}</h2>
     {selectedPokemon.name && (
@@ -24,6 +25,7 @@ const SelectedPokemon = (props) => {
       </div>
     )}
   </div>
+    )
 }
 
 export default SelectedPokemon;
