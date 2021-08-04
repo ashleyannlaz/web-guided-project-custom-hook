@@ -3,13 +3,14 @@ import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 
 import Button from "../theme/Button";
-// 1. create useForm
-// 2. add in stateful logic into useForm
-// 3. return all needed items from useForm
-// 4. connect useForm to our SignupForm
 
-const useForm = (initialValue) => {
-  const [firstName, setFirstName] = useState(initialValue);
+//1. create useForm
+//2. add in all stateful logic into useForm
+//3. return all needed items from useFrom
+//4. Connect useForm to our SignupForm component
+
+const useForm = (initValue)=> {
+  const [firstName, setFirstName] = useState(initValue);
 
   const handleChanges = e => {
     setFirstName(e.target.value);
@@ -19,12 +20,13 @@ const useForm = (initialValue) => {
     e.preventDefault();
     setFirstName("");
   };
+
   return [firstName, handleChanges, clearForm];
 }
 
 export default function SignupForm() {
   const classes = useStyles();
-  const [firstName, handleChanges, clearForm] = useForm("Ashley");
+  const [firstName, handleChanges, clearForm] = useForm("");
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -42,6 +44,26 @@ export default function SignupForm() {
             className={classes.textField}
             name="firstName"
             value={firstName}
+            onChange={handleChanges}
+            margin="normal"
+            variant="outlined"
+          />
+          <TextField
+            id="outlined-name"
+            label="Last Name"
+            className={classes.textField}
+            name="last"
+            value={lastName}
+            onChange={handleChanges}
+            margin="normal"
+            variant="outlined"
+          />
+          <TextField
+            id="outlined-name"
+            label="Email"
+            className={classes.textField}
+            name="email"
+            value={email}
             onChange={handleChanges}
             margin="normal"
             variant="outlined"

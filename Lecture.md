@@ -23,6 +23,21 @@ Each component should do ONE thing
 - make each piece easy to test
 
 Modularizing our components
-- subcomponents (presentation logic)
+- sub components (presentation logic)
 - services (data logic) what is the code that makes API calls
-- custom hooks (staeful logic)
+- custom hooks (stateful logic)
+
+Key Terminology:
+localStorage - a javascript module for saving persistent data within your application
+
+the JSON library - used for working with JSON objects. used in this lesson specifically to convert between objects and string using JSON.parse and JSON.stringify
+
+custom hook - a function used in functional React components for separating business logic
+
+composing hooks - the process of wrapping and modifying the functionality of one hook with another
+
+Stateful Logic - Application logic related to the manipulation of data
+
+Seperation of Concerns - The programming principle related to developing small, focused, modular and interconnected code.
+
+object bracket notation - Also called "Computed properties." A piece of javascript syntax that allows for the key of an object to be passed dynamicly
